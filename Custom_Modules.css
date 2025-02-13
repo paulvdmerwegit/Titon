@@ -1,378 +1,548 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+:root {
+  --corporate: #931A24;
+  --ventilation: #3B5163; /* actual #3B5163--- test #1EE725 */
+  --hardware: #6C3C6C;
+  --dark: #231f20; /* actual #231f20 --- test #FF41BD */
+  --copy: #584c50; /* actual #584c50 --- test #F7A79C */
+  --light: #FAFAFA; /* actual #FAFAFA --- test #FF8400 */
+  --tag-corporate: #931A24; /* actual #931A24 --- test #A33FD9*/
+  --tag-ventilation: #4D748D; /* actual #4D748D --- test #7424FF */
+  --tag-hardware: #6C3C6C;
+  --tag-dark: #231F20;
+  --tag-light: #FAFAFA; /* actual #FAFAFA --- test #FF8400 */
+}
+
 /**************************************************************H1************************************************************************/
-.h1-ventilation {
-  font-family: Poppins !important;
-  color: var(--Horizon-800, #364554);
-  font-size: 64px;
-  font-style: normal;
+
+[class^="h1-"] {
+  font: 700 64px/100% 'Poppins', sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 700;
+  text-decoration: none;
   letter-spacing: -1.28px;
-  line-height: 100%;
   margin-bottom: 12px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
+}
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h1-corporate { //color: #931A24; color: var(--corporate); }
+.h1-ventilation { //color: #364554; color: var(--ventilation); }
+.h1-hardware { //color: #6C3C6C; color: var(--hardware); }
+.h1-dark { //color: #231F20; color: var(--dark); }
+.h1-light { //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+}
+
+[class^="h1-"]:hover,
+[class^="h1-"]:focus {
+  text-decoration: none;
+}
+
+/*
+.h1-ventilation {
+font-family: Poppins !important;
+color: var(--Horizon-800, #364554);
+font-size: 64px;
+font-style: normal;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-weight: 700;
+letter-spacing: -1.28px;
+line-height: 100%;
+margin-bottom: 12px;
+text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
 }
 .h1-hardware {
-  font-family: Poppins !important;
-  color: #6C3C6C;
-  font-size: 64px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 700;
-  letter-spacing: -1.28px;
-  line-height: 100%;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
+font-family: Poppins !important;
+color: #6C3C6C;
+font-size: 64px;
+font-style: normal;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-weight: 700;
+letter-spacing: -1.28px;
+line-height: 100%;
+margin-bottom: 12px;
+text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
 }
 .h1-corporate {
-  font-family: Poppins !important;
-  color: #931A24;
-  font-size: 64px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 700;
-  letter-spacing: -1.28px;
-  line-height: 100%;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
+font-family: Poppins !important;
+color: #931A24;
+font-size: 64px;
+font-style: normal;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-weight: 700;
+letter-spacing: -1.28px;
+line-height: 100%;
+margin-bottom: 12px;
+text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
 }
 .h1-dark {
-  font-family: Poppins !important;
-  color: #4b4144;
-  font-size: 64px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 700;
-  letter-spacing: -1.28px;
-  line-height: 100%;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
+font-family: Poppins !important;
+color: #4b4144;
+font-size: 64px;
+font-style: normal;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-weight: 700;
+letter-spacing: -1.28px;
+line-height: 100%;
+margin-bottom: 12px;
+text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
 }
 .h1-light {
-  font-family: Poppins !important;
-  color: #fafafa;
-  font-size: 64px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 700;
-  letter-spacing: -1.28px;
-  line-height: 100%;
-  margin-bottom: 12px;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
-}
+font-family: Poppins !important;
+color: #fafafa;
+font-size: 64px;
+font-style: normal;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-weight: 700;
+letter-spacing: -1.28px;
+line-height: 100%;
+margin-bottom: 12px;
+text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+//text-shadow: 1px 1px 0 rgba(0, 0, 0, .55), -2px 2px 34px rgba(0, 0, 0, .32);
+}*/
+
 /**************************************************************H2************************************************************************/
-.h2-ventilation,
+
+[class^="h2-"] {
+  font: 700 40px/110% 'Poppins', sans-serif !important;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-decoration: none;
+  margin-bottom: 22px;
+}
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h2-corporate { //color: #931A24; color: var(--corporate); }
+.h2-ventilation { //color: #364554; color: var(--ventilation); }
+.h2-hardware { //color: #6C3C6C; color: var(--hardware); }
+.h2-dark { //color: #231F20; color: var(--dark); }
+.h2-light { //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+}
+
+[class^="h2-"]:hover:where(a) {
+  text-decoration: underline;
+  color: inherit;
+}
+[class^="h2"]:focus {
+  text-decoration: none;
+}
+
+/*.h2-ventilation,
 .h2-ventilation:hover,
 .h2-ventilation:focus {
-  color: #364554;  
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 44px */
-  margin-bottom:22px;
-  text-decoration:none;
+color: #364554;
+color: var(--h2-ventilation);  
+font-variant-numeric: oldstyle-nums proportional-nums;
+font: normal 700 40px/110% 'Poppins', sans-serif !important;
+margin-bottom:22px;
+text-decoration:none;
 }
+
 .h2-hardware,
 .h2-hardware:hover,
 .h2-hardware:focus {
-  color: #6C3C6C;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 44px */
-  margin-bottom:22px;
-  text-decoration:none;
+color: #6C3C6C;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%;
+margin-bottom:22px;
+text-decoration:none;
 }
 .h2-corporate,
 .h2-corporate:hover,
 .h2-corporate:focus {
-  color: #931A24;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 44px */
-  margin-bottom:22px;
-  text-decoration:none;
+color: #931A24;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%;
+margin-bottom:22px;
+text-decoration:none;
 }
 .h2-light,
 .h2-light:hover,
 .h2-light:focus {
-  color: #ffffff;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 44px */
-  margin-bottom:22px;
-  text-decoration:none;
+color: #fafafa;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+font-family: Poppins !important;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%;
+margin-bottom:22px;
+text-decoration:none;
 }
 .h2-dark,
 .h2-dark:hover,
 .h2-dark:focus {
-  color: #231F20;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 44px */
-  margin-bottom:22px;
-  text-decoration:none;
-}
+color: #231F20;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%;
+margin-bottom:22px;
+text-decoration:none;
+}*/
+
+
 /**************************************************************H3************************************************************************/
-.h3-ventilation {
-  color: #364554;
+
+[class^="h3-"] {
+  font: 600 32px/120% 'Poppins', sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #040C15;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+  text-decoration: none;
+}
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h3-corporate { //color: #931A24; color: var(--corporate); }
+.h3-ventilation { //color: #364554; color: var(--ventilation); }
+.h3-hardware { //color: #6C3C6C; color: var(--hardware); }
+.h3-dark { //color: #231F20; color: var(--dark); }
+.h3-light { //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+}
+
+[class^="h3-"]:hover,
+[class^="h3-"]:focus {
+  text-decoration: none;
+}
+
+
+/*.h3-ventilation {
+color: #364554;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #040C15;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h3-hardware {
-  color: #6C3C6C;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #040C15;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #6C3C6C;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #040C15;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h3-corporate {
-  color: #931A24;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #040C15;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #931A24;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #040C15;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h3-dark {
-  color: #4b4144;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #040C15;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #4b4144;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #040C15;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h3-light {
-  color: #ffffff;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #040C15;
-  font-family: Poppins;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-}
+color: #fafafa;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+//text-shadow: 1px 1px 0px #040C15;
+font-family: Poppins;
+font-size: 32px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+}*/
+
+
 /************************************************************H4**************************************************************************/
-.h4-ventilation {
-  color: #364554;
+
+[class^="h4-"] {
+  font: 600 24px/120% 'Poppins', sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #1D262F;
-  font-family: Poppins !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+  text-decoration: none;
+}
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h4-corporate { //color: #931A24; color: var(--corporate); }
+.h4-ventilation { //color: #364554; color: var(--ventilation); }
+.h4-hardware { //color: #6C3C6C; color: var(--hardware); }
+.h4-dark { //color: #231F20; color: var(--dark); }
+.h4-light { //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+}
+
+[class^="h4-"]:hover,
+[class^="h4-"]:focus {
+  text-decoration: none;
+}
+
+
+/*.h4-ventilation {
+color: #364554;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #1D262F;
+font-family: Poppins !important;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h4-hardware {
-  color: #6C3C6C;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #1D262F;
-  font-family: Poppins !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #6C3C6C;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #1D262F;
+font-family: Poppins !important;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h4-corporate {
-  color: #931A24;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #1D262F;
-  font-family: Poppins !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #931A24;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #1D262F;
+font-family: Poppins !important;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h4-light {
-  color: #FFFFFF;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #1D262F;
-  font-family: Poppins !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #fafafa;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
+//text-shadow: 1px 1px 0px #1D262F;
+font-family: Poppins !important;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
 .h4-dark {
-  color: #4b4144;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  text-shadow: 1px 1px 0px #1D262F;
-  font-family: Poppins !important;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
+color: #4b4144;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-shadow: 1px 1px 0px #1D262F;
+font-family: Poppins !important;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
 }
+*/
+
 .distributorsHeading .h4-dark {
   color: #231F20;
 }
 /************************************************************H5**************************************************************************/
-.h5-ventilation {
-  color: #364554;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  margin: 0px;
+
+[class^="h5-"] {
+  font: 600 20px/120% 'Poppins', sans-serif !important;
+  font-variant-numeric: oldstyle-nums proportional-nums;
   margin-bottom:12px;
-  font-family: Poppins !important;
+  text-decoration: none;
 }
-.h5-ventilation:hover {
-  color: #364554;
-}
-.h5-hardware {
-  color: #6c3c6c;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  margin: 0px;
-  margin-bottom:12px;
-  font-family: Poppins !important;
-}
-.h5-hardware:hover {
-  color: #6c3c6c;
-}
-.h5-corporate {
-  color: #931a24;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;  
-  margin: 0px;
-  margin-bottom:12px;
-  font-family: Poppins !important;
-}
-.h5-corporate:hover {
-  color: #931a24;
-}
-.h5-light {
-  color: #ffffff;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;  
-  margin: 0px;
-  margin-bottom:12px;
-  font-family: Poppins !important;
-}
-.h5-light:hover {
-  color: #ffffff;
-}
-.h5-dark {
-  color: #231f20;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  margin: 0px;
-  margin-bottom:12px;
-  font-family: Poppins !important;
-}
-.h5-dark:hover {
-  color: #231f20;
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h5-corporate { //color: #931A24; color: var(--corporate); }
+.h5-ventilation { //color: #364554; color: var(--ventilation); }
+.h5-hardware { //color: #6C3C6C; color: var(--hardware); }
+.h5-dark { //color: #231F20; color: var(--dark); }
+.h5-light { //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
 }
 
+[class^="h5-"]:hover,
+[class^="h5-"]:focus {
+  text-decoration: none;
+}
+
+
+/*.h5-ventilation {
+color: #364554;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+margin: 0px;
+margin-bottom:12px;
+font-family: Poppins !important;
+}
+.h5-ventilation:hover {
+color: #364554;
+}
+.h5-hardware {
+color: #6c3c6c;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+margin: 0px;
+margin-bottom:12px;
+font-family: Poppins !important;
+}
+.h5-hardware:hover {
+color: #6c3c6c;
+}
+.h5-corporate {
+color: #931a24;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;  
+margin: 0px;
+margin-bottom:12px;
+font-family: Poppins !important;
+}
+.h5-corporate:hover {
+color: #931a24;
+}
+.h5-light {
+color: #fafafa;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;  
+margin: 0px;
+margin-bottom:12px;
+font-family: Poppins !important;
+}
+.h5-light:hover {
+color: #ffffff;
+}
+.h5-dark {
+color: #231f20;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+margin: 0px;
+margin-bottom:12px;
+font-family: Poppins !important;
+}
+.h5-dark:hover {
+color: #231f20;
+}
+*/
+
 /***********************************************************H6***************************************************************************/
-.h6-ventilation {
-  color: #1d262f;
+
+[class^="h6-"] {
+  font: 500 20px/120% 'Poppins', sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 0px;
+  letter-spacing: 2px;
   margin-bottom: 8px;
+  padding-bottom: 4px;
+  text-decoration: none;
+}
+/*  // fallback colour for IE 11 if causing issues we can active */
+.h6-ventilation { //color: #4D748D; color: var(--tag-ventilation); }
+.h6-hardware { //color: #6C3C6C; color: var(--tag-hardware); }
+.h6-corporate { //color: #931A24; color: var(--tag-corporate); }
+.h6-dark { //color: #231F20; color: var(--tag-dark); }
+.h6-light { //color: #ffffff; color: var(--tag-light); }
+
+.h6-ventilation svg path { //color: #4D748D; stroke: var(--tag-ventilation); }
+.h6-hardware svg path { //color: #6C3C6C; stroke: var(--tag-hardware); }
+.h6-corporate svg path { //color: #931A24; stroke: var(--tag-corporate); }
+.h6-dark svg path { //color: #231F20; stroke: var(--tag-dark); }
+.h6-light svg path { //color: #ffffff; stroke: var(--tag-light); }
+
+
+
+[class^="h6-"]:hover:where(a) {
+  text-decoration: underline;
+  color: inherit;
+}
+[class^="h6-"]:focus {
+  text-decoration: none;
+}
+
+
+/*.h6-ventilation {
+color: #1d262f;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin: 0px;
+margin-bottom: 8px;
 }
 .h6-hardware {
-  color: #381a37;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0px;
-  margin-bottom: 8px;
+color: #381a37;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin: 0px;
+margin-bottom: 8px;
 }
 .h6-corporate {
-  color: #450a0f;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0px;
-  margin-bottom: 8px;
+color: #450a0f;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin: 0px;
+margin-bottom: 8px;
 }
 .h6-light {
-  color: #ffffff;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0px;
-  margin-bottom: 8px;
+color: #ffffff;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin: 0px;
+margin-bottom: 8px;
 }
 .h6-dark {
-  color: #231F20;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin: 0px;
-  margin-bottom: 8px;
+color: #231F20;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%;
+letter-spacing: 2px;
+text-transform: uppercase;
+margin: 0px;
+margin-bottom: 8px;
 }
+*/
+
 /***********************************************************Body-Copy***************************************************************************/
 .body-copy,
 .body-copy p {
-  color: var(--Night-700, #584C50);
+  //color: #584c50; color: var(--copy);
+  font: 400 16px/140% "Space Grotesk", sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: "Space Grotesk" !important;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%; /* 22.4px */
   margin-bottom:20px;
   text-decoration: none;
 }
@@ -383,7 +553,7 @@
 }
 .body-copy-light,
 .body-copy-light p {
-  color: var(--color-white-solid, #FFF);
+  color: var(--color-white-solid, #fafafa);
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: "Space Grotesk" !important;
   font-size: 16px;
@@ -396,7 +566,7 @@
 }
 .body-copy-light:hover,
 .body-copy-light:focus {
-  color:#ffffff;
+  color:#fff;
   text-decoration: none;
 }
 .body-copy-ventilation,
@@ -648,7 +818,7 @@ text-decoration:none;
 }
 .tag-resources-light {
   font-family: Poppins !important;
-  color: #ffffff;
+  color: #fafafa;
   font-size: 16px;
   font-style: normal;
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -660,7 +830,7 @@ text-decoration:none;
 }
 .tag-resources-light svg,
 .tag-resources-light path {
-  fill: #ffffff;
+  fill: #fafafa;
 }
 .tag-resources-dark {
   font-family: Poppins !important;
@@ -680,7 +850,7 @@ text-decoration:none;
 }
 /******************************************************Tag********************************************************************************/
 .tag-ventilation {  
-  color: var(--Horizon-500, #4D748D);
+  color: var(--tag-ventilation);
   text-align: center;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: Poppins !important;
@@ -692,10 +862,10 @@ text-decoration:none;
   text-transform: uppercase;
 }
 .tag-ventilation:hover {  
-  color: var(--Horizon-500, #4D748D);
+  color: var(--tag-ventilation);
 }
 .tag-hardware {  
-  color: #6C3C6C; 
+  color: var(--tag-hardware);
   text-align: center;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: Poppins !important;
@@ -707,10 +877,10 @@ text-decoration:none;
   text-transform: uppercase;
 }
 .tag-hardware:hover {  
-  color: #6C3C6C;
+  color: var(--tag-hardware);
 }
 .tag-corporate {  
-  color: #931A24; 
+  color: var(--tag-corporate);
   text-align: center;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: Poppins !important;
@@ -725,7 +895,7 @@ text-decoration:none;
   color: #931A24;
 }
 .tag-dark {  
-  color: #231F20; 
+  color: var(--tag-dark); 
   text-align: center;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: Poppins !important;
@@ -740,7 +910,7 @@ text-decoration:none;
   color: #231F20; 
 }
 .tag-light {  
-  color: #ffffff; 
+  color: var(--tag-light);
   text-align: center;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: Poppins !important;
@@ -756,17 +926,18 @@ text-decoration:none;
 }
 
 /****************************************************Distributors Tag******************************************************************************/
+
 .distributorsTag .tag-ventilation {
-  color: var(--Horizon-500, #4D748D);
+  color: var(--tag-ventilation);
 }
 .distributorsTag .tag-hardware {
-  color: #ba79bc;
+  color: var(--tag-hardware);
 }
 .distributorsTag .tag-corporate {
-  color: #ef4452;
+  color: var(--tag-corporate);
 }
 .distributorsTag .tag-dark {
-  color: #847379;
+  color: var(--tag-dark);
 }
 
 /******************************************************Lead Text********************************************************************************/
@@ -820,7 +991,7 @@ text-decoration:none;
 }
 .lead-light,
 .lead-light p {
-  color: #fff;
+  color: #fafafa;
   font-size: 20px;
   font-style: normal;
   font-variant-numeric: oldstyle-nums proportional-nums;
@@ -961,77 +1132,102 @@ text-shadow: -1px 1px 0 #1d262f;
   text-shadow: 1px 1px 0 #1d262f;
 }
 /******************************************************tag-h6-ventilation********************************************************************************/
-.tag-h6-ventilation,
+
+[class^="tag-h6-"] {
+  font: 500 20px/120% 'Poppins', sans-serif !important;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  /*padding-bottom: 4px;*/
+  text-decoration: none;
+}
+
+.tag-h6-ventilation { color: #4D748D; color: var(--tag-ventilation); }
+.tag-h6-hardware { color: #6C3C6C; color: var(--tag-hardware); }
+.tag-h6-corporate { color: #931A24; color: var(--tag-corporate); }
+.tag-h6-dark { color: #231F20; color: var(--tag-dark); }
+.tag-h6-light { color: #ffffff; color: var(--tag-light); }
+
+
+.tag-h6-ventilation svg path { fill: #4D748D; fill: var(--tag-ventilation); }
+.tag-h6-hardware svg path { fill: #6C3C6C; fill: var(--tag-hardware); }
+.tag-h6-corporate svg path { fill: #931A24; fill: var(--tag-corporate); }
+.tag-h6-dark svg path { fill: #231F20; fill: var(--tag-dark); }
+.tag-h6-light svg path { fill: #ffffff; fill: var(--tag-light); }  
+
+[class^="tag-h6-"]:hover,
+[class^="tag-h6-"]:focus {
+  text-decoration: none;
+}
+
+
+/*.tag-h6-ventilation,
 .tag-h6-ventilation:hover,
 .tag-h6-ventilation:focus { 
-  color: var(--Horizon-500, #4D748D);
-  font-size: 20px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  line-height: 120%;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  text-decoration:none;
+color: var(--Horizon-500, #4D748D);
+font: 500 20px/120% 'Poppins', sans-serif !important;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+padding-bottom: 4px;
+text-decoration: none;
 }
 
 .tag-h6-hardware,
 .tag-h6-hardware:hover,
 .tag-h6-hardware:focus { 
-  color:#ba79bc;
-  font-size: 20px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  line-height: 120%;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  text-decoration:none;
+color: var(--Vivid-Violet-800, #6C3C6C);
+font: 500 20px/120% 'Poppins', sans-serif !important;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+padding-bottom: 4px;
+text-decoration: none;
 }
+
 .tag-h6-corporate,
 .tag-h6-corporate:hover,
 .tag-h6-corporate:focus { 
-  color:#9B2B19;
-  font-size: 20px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  line-height: 120%;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  text-decoration:none;
+color: var(--Titon-Red-800, #931A24);
+font: 500 20px/120% 'Poppins', sans-serif !important;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+padding-bottom: 4px;
+text-decoration: none;
+
 }
 .tag-h6-dark,
 .tag-h6-dark:hover,
 .tag-h6-dark:focus { 
-  color:#847379;
-  font-size: 20px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  line-height: 120%;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  text-decoration:none;
+color: var(--Night, #231F20);
+font: 500 20px/120% 'Poppins', sans-serif !important;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+padding-bottom: 4px;
+text-decoration: none;
 }
+
 .tag-h6-light,
 .tag-h6-light:hover,
 .tag-h6-light:focus { 
-  color:#ffffff;
-  font-size: 20px;
-  font-style: normal;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-weight: 500;
-  letter-spacing: 1.6px;
-  line-height: 120%;
-  margin: 0 0 8px;
-  text-transform: uppercase;
-  text-decoration:none;
-}
+color:#ffffff;
+font: 500 20px/120% 'Poppins', sans-serif !important;
+font-variant-numeric: oldstyle-nums proportional-nums;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 8px;
+padding-bottom: 4px;
+text-decoration: none;
+}*/
+
+
 /******************************************************Responsive********************************************************************************/
 .bar-ventilation {
   width: 66px;
@@ -1106,7 +1302,7 @@ text-shadow: -1px 1px 0 #1d262f;
 }
 .lead-copy-light,
 .lead-copy-light p {
-  color:#ffffff;
+  color:#fafafa;
   font-variant-numeric: oldstyle-nums proportional-nums;
   font-family: "Space Grotesk";
   font-size: 20px;
@@ -1115,66 +1311,95 @@ text-shadow: -1px 1px 0 #1d262f;
   line-height: 130%; /* 26px */
 }
 /******************************************************Tag Default********************************************************************************/
-.tag-default-ventilation {
-  color: var(--Horizon-500, #4D748D);
+
+[class^="tag-default-"] {
+  font: 600 14px/120% 'Poppins', sans-serif !important;
   font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom:8px;
+  letter-spacing: 1.4px;
+  margin-bottom: 8px;
+  text-decoration: none;
 }
+/*  // fallback colour for IE 11 if causing issues we can active */
+.tag-default-ventilation { //color: #4D748D; color: var(--tag-ventilation); }
+.tag-default-hardware { //color: #6C3C6C; color: var(--tag-hardware); }
+.tag-default-corporate { //color: #931A24; color: var(--tag-corporate); }
+.tag-default-dark { //color: #231F20; color: var(--tag-dark); }
+.tag-default-light { //color: #ffffff; color: var(--tag-light); }
+
+[class^="tag-default-"]:hover:where(a) {
+  text-decoration: underline;
+  color: inherit;
+}
+[class^="tag-default-"]:focus {
+  text-decoration: none;
+}
+
+
+
+/*.tag-default-ventilation {
+//color: #4D748D;
+color: var(--tag-ventilation); 
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-bottom:8px;
+}
+
 .tag-default {
-  color:#931a24;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom:8px;
+color:#931a24;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-bottom:8px;
 }
 .tag-default-hardware {
-  color:#6c3c6c;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.4px;
-  margin-bottom:8px;
-  text-transform: uppercase;
+color:#6c3c6c;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 1.4px;
+margin-bottom:8px;
+text-transform: uppercase;
 }
 .tag-default-dark {
-  color:#4b4144;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom:8px;
+color:#4b4144;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-bottom:8px;
 }
 .tag-default-light {
-  color:#ffffff;
-  font-variant-numeric: oldstyle-nums proportional-nums;
-  font-family: Poppins !important;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 120%;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom:8px;
-}
+color:#ffffff;
+font-variant-numeric: oldstyle-nums proportional-nums;
+font-family: Poppins !important;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 120%;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+margin-bottom:8px;
+}*/
+
 /******************************************************nav-button-icon-default********************************************************************************/
 /*.nav-button-icon-default-ventilation,
 .nav-button-icon-default-ventilation:hover {
@@ -1625,21 +1850,24 @@ text-decoration: none;
   color:#231F20 !important;
 }
 /*************************************************************Process Card h4********************************************************************************/
+
+.processCardInr .h4-corporate {
+  //color: #931A24; color: var(--corporate);
+}
 .processCardInr .h4-ventilation {
-  color: var(--Horizon-500, #4D748D);
+  //color: #364554; color: var(--ventilation);
 }
 .processCardInr .h4-hardware {
-  color: #ba79bc;
-}
-.processCardInr .h4-corporate {
-  color: #ef4452;
+  //color: #6C3C6C; color: var(--hardware);
 }
 .processCardInr .h4-dark {
-  color: #847379;
+  //color: #231F20; color: var(--dark);
 }
 .processCardInr .h4-light {
-  color: #ffffff;
+  //color: #FAFAFA; color: var(--light);   
+  text-shadow: -1px 1px 3px rgba(0, 0, 0, 0.40), -2px 2px 34px rgba(0, 0, 0, 0.32);
 }
+
 /*************************************************************Process Card Bg Color********************************************************************************/
 .processCard-ventilation {
   background-color:#364554;
@@ -2233,16 +2461,32 @@ fill:#364554;
 /******************************************************Breadcrumb********************************************************************************/
 .breadcrumb-light,
 .breadcrumb-light a,
-.breadcrumb-light a:hover {
+.breadcrumb-light a:hover,
+.breadcrumb-light a:focus {
   color:#ffffff;
+  text-align: center;
+  font: 400 12px / 120% "Poppins", sans-serif !important;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 .breadcrumb-light svg path {
   stroke:#ffffff;
 }
 .breadcrumb-dark,
 .breadcrumb-dark a,
-.breadcrumb-dark a:hover {
+.breadcrumb-dark a:hover,
+.breadcrumb-dark a:focus {
   color:#231F20;
+  text-align: center;
+  font: 400 12px / 120% "Poppins", sans-serif !important;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
 }
 .breadcrumb-dark svg path {
   stroke:#231F20;
@@ -2267,14 +2511,587 @@ fill:#364554;
   background-color:#B91C29;
 }
 
-
-
-
+/***************************************************Outline button Medium**********************************************************/
+.nav-button-icon-medium-outline-light,
+.nav-button-icon-medium-outline-light:hover,
+.nav-button-icon-medium-outline-light:focus {
+  display: inline-flex;
+  height: 45px;
+  padding: 16px 12px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1.6px;
+  transition: color .3s ease,background-color .3s ease,border .3s ease,transform .3s ease;
+}
+.nav-button-icon-medium-outline-light:hover {
+  transform: scale(1.1);
+}
+a.nav-button-icon-medium-outline-light svg path {
+  stroke: #ffffff !important;
+}
+.nav-button-icon-medium-outline-ventilation,
+.nav-button-icon-medium-outline-ventilation:hover,
+.nav-button-icon-medium-outline-ventilation:focus {
+  display: inline-flex;
+  height: 45px;
+  padding: 16px 12px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid #426078;
+  color: #426078;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1.6px;
+  transition: color .3s ease,background-color .3s ease,border .3s ease,transform .3s ease;
+}
+.nav-button-icon-medium-outline-ventilation:hover {
+  transform: scale(1.1);
+}
+a.nav-button-icon-medium-outline-ventilation svg path {
+  stroke: #426078 !important;
+}
+.nav-button-icon-medium-outline-hardware,
+.nav-button-icon-medium-outline-hardware:hover,
+.nav-button-icon-medium-outline-hardware:focus {
+  display: inline-flex;
+  height: 45px;
+  padding: 16px 12px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid #9e5a9f;
+  color: #9e5a9f;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1.6px;
+ transition: color .3s ease,background-color .3s ease,border .3s ease,transform .3s ease;
+}
+.nav-button-icon-medium-outline-hardware:hover {
+  transform: scale(1.1);
+}
+a.nav-button-icon-medium-outline-hardware svg path {
+  stroke: #9e5a9f !important;
+}
+.nav-button-icon-medium-outline-corporate,
+.nav-button-icon-medium-outline-corporate:hover,
+.nav-button-icon-medium-outline-corporate:focus {
+  display: inline-flex;
+  height: 45px;
+  padding: 16px 12px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid #dc2635;
+  color: #dc2635;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1.6px;
+  transition: color .3s ease,background-color .3s ease,border .3s ease,transform .3s ease;
+}
+.nav-button-icon-medium-outline-corporate:hover {
+  transform: scale(1.1);
+}
+a.nav-button-icon-medium-outline-corporate svg path {
+  stroke: #dc2635 !important;
+}
+.nav-button-icon-medium-outline-dark,
+.nav-button-icon-medium-outline-dark:hover,
+.nav-button-icon-medium-outline-dark:focus {
+  display: inline-flex;
+  height: 45px;
+  padding: 16px 12px 16px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 7px;
+  border: 1px solid #6c5d62;
+  color: #6c5d62;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 1.6px;
+  transition: color .3s ease,background-color .3s ease,border .3s ease,transform .3s ease;
+}
+.nav-button-icon-medium-outline-dark:hover {
+  transform: scale(1.1);
+}
+.nav-button-icon-medium-outline-dark svg path {
+  stroke: #6c5d62 !important;
+}
 
 
 /*******************************************************Header********************************************************************/
+.nav-button-icon-ventilation-default,
+.nav-button-icon-ventilation-default:hover {
+  color: #364554;
+  font-family: "Space Grotesk" !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.647px; 
+  letter-spacing: 1.8px;
+  display: inline-flex;
+  padding: 8px 0px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5.453px;
+}
+.nav-button-icon-ventilation-default svg {
+  fill: #364554;
+  transition: transform 0.3s ease-in-out;
+  margin:0px;
+}
+.nav-button-icon-ventilation-default:hover svg {
+  transform: translateX(10px);
+}
+.nav-button-icon-ventilation-default svg rect {
+  fill: #364554;
+}
+.nav-button-icon-hardware-default,
+.nav-button-icon-hardware-default:hover {
+  color: #6C3C6C;
+  font-family: "Space Grotesk" !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.647px; 
+  letter-spacing: 1.8px;
+  display: inline-flex;
+  padding: 8px 0px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5.453px;
+}
+.nav-button-icon-hardware-default svg {
+  fill: #6C3C6C;
+  transition: transform 0.3s ease-in-out;
+  margin:0px;
+}
+.nav-button-icon-hardware-default:hover svg {
+  transform: translateX(10px);
+}
+.nav-button-icon-hardware-default svg rect {
+  fill: #6C3C6C;
+}
+.nav-button-icon-default,
+.nav-button-icon-default:hover {
+  color: #931A24;
+  font-family: "Space Grotesk" !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.647px; 
+  letter-spacing: 1.8px;
+  display: inline-flex;
+  padding: 8px 0px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5.453px;
+}
+.nav-button-icon-default svg {
+  fill: #931A24;
+  transition: transform 0.3s ease-in-out;
+  margin:0px;
+}
+.nav-button-icon-default:hover svg {
+  transform: translateX(10px);
+}
+.nav-button-icon-default svg rect {
+  fill: #931A24;
+}
+.nav-button-icon-ventilation-white,
+.nav-button-icon-ventilation-white:hover {
+  color: #ffffff;
+  font-family: "Space Grotesk" !important;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22.647px; 
+  letter-spacing: 1.8px;
+  display: inline-flex;
+  padding: 8px 0px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 5.453px;
+}
+.nav-button-icon-ventilation-white svg {
+  fill:#ffffff;
+  transition: transform 0.3s ease-in-out;
+  margin:0px;
+}
+.nav-button-icon-ventilation-white:hover svg {
+  transform: translateX(10px);
+}
+.nav-button-icon-ventilation-white svg rect {
+  fill:#ffffff;
+}
 
 
+
+.main-small-ventilation {
+  display: inline-flex;
+  height: 35px;
+  padding: 12px 18.667px;
+  align-items: center;
+  gap: 8.388px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: linear-gradient(270deg, #3B5163 0%, #5E88A2 100%);
+  box-shadow: 3.111px 2.333px 4.667px 2.333px rgba(0, 0, 0, 0.06);
+  color: #FFF;
+  text-shadow: -0.8px 0.8px 0px rgba(147, 26, 36, 0.70);
+  font-family: "Space Grotesk" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.614px; /* 110.09% */
+  letter-spacing: 1.6px;
+  text-decoration:none;
+  transition: background-position .6s ease-in-out,box-shadow .3s ease-in-out,padding .3s ease-in-out,transform .3s ease-in-out;
+}
+.main-small-ventilation:hover {
+  color:#ffffff;
+  text-decoration:none;
+  font-weight: 700;
+  background-position: 100% 50%;
+  padding: 12px 24px;
+  transform: scale(1.05);
+  box-shadow: 1.636px 3.273px 14px rgba(0, 0, 0, .35);
+}
+.main-small-hardware {
+  display: inline-flex;
+  height: 35px;
+  padding: 12px 18.667px;
+  align-items: center;
+  gap: 8.388px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: linear-gradient(270deg, #6C3C6C 0%, #9E5A9F 100%);
+  box-shadow: 3.111px 2.333px 4.667px 2.333px rgba(0, 0, 0, 0.06);
+  color: #FFF;
+  text-shadow: -0.8px 0.8px 0px rgba(147, 26, 36, 0.70);
+  font-family: "Space Grotesk" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.614px; /* 110.09% */
+  letter-spacing: 1.6px;
+  text-decoration:none;
+  transition: background-position .6s ease-in-out,box-shadow .3s ease-in-out,padding .3s ease-in-out,transform .3s ease-in-out;
+}
+.main-small-hardware:hover {
+  color:#ffffff;
+  text-decoration:none;
+  font-weight: 700;
+  background-position: 100% 50%;
+  padding: 12px 24px;
+  transform: scale(1.05);
+  box-shadow: 1.636px 3.273px 14px rgba(0, 0, 0, .35);
+}
+.main-small-corporate {
+  display: inline-flex;
+  height: 35px;
+  padding: 12px 18.667px;
+  align-items: center;
+  gap: 8.388px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: linear-gradient(270deg, #B91C29 0%, #DC2635 100%);
+  box-shadow: 3.111px 2.333px 4.667px 2.333px rgba(0, 0, 0, 0.06);
+  color: #FFF;
+  text-shadow: -0.8px 0.8px 0px rgba(147, 26, 36, 0.70);
+  font-family: "Space Grotesk" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.614px; /* 110.09% */
+  letter-spacing: 1.6px;
+  text-decoration:none;
+  transition: background-position .6s ease-in-out,box-shadow .3s ease-in-out,padding .3s ease-in-out,transform .3s ease-in-out;
+}
+.main-small-corporate:hover {
+  color: #FFF;
+  text-decoration:none;
+  font-weight: 700;
+  background-position: 100% 50%;
+  padding: 12px 24px;
+  transform: scale(1.05);
+  box-shadow: 1.636px 3.273px 14px rgba(0, 0, 0, .35);
+}
+.main-small-light {
+  display: inline-flex;
+  height: 35px;
+  padding: 12px 18.667px;
+  align-items: center;
+  gap: 8.388px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: linear-gradient(270deg, #ffffff 0%, #ffffff 100%);
+  color: #231F20;
+  box-shadow: 3.111px 2.333px 4.667px 2.333px rgba(0, 0, 0, 0.06);
+  text-shadow: -0.8px 0.8px 0px rgba(147, 26, 36, 0.70);
+  font-family: "Space Grotesk" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.614px; /* 110.09% */
+  letter-spacing: 1.6px;
+  text-decoration:none;
+  transition: background-position .6s ease-in-out,box-shadow .3s ease-in-out,padding .3s ease-in-out,transform .3s ease-in-out;
+}
+.main-small-light:hover {
+  color:#231F20;
+  text-decoration:none;
+  font-weight: 700;
+  background-position: 100% 50%;
+  padding: 12px 24px;
+  transform: scale(1.05);
+  box-shadow: 1.636px 3.273px 14px rgba(0, 0, 0, .35);
+}
+.main-small-dark {
+  display: inline-flex;
+  height: 35px;
+  padding: 12px 18.667px;
+  align-items: center;
+  gap: 8.388px;
+  flex-shrink: 0;
+  border-radius: 7px;
+  background: linear-gradient(270deg, #231f20 0%, #6c5d62 100%);
+  box-shadow: 3.111px 2.333px 4.667px 2.333px rgba(0, 0, 0, 0.06);
+  color: #FFF;
+  text-shadow: -0.8px 0.8px 0px rgba(147, 26, 36, 0.70);
+  font-family: "Space Grotesk" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 17.614px; /* 110.09% */
+  letter-spacing: 1.6px;
+  text-decoration:none;
+  transition: background-position .6s ease-in-out,box-shadow .3s ease-in-out,padding .3s ease-in-out,transform .3s ease-in-out;
+}
+.main-small-dark:hover {
+  color:#ffffff;
+  text-decoration:none;
+  font-weight: 700;
+  background-position: 100% 50%;
+  padding: 12px 24px;
+  transform: scale(1.05);
+  box-shadow: 1.636px 3.273px 14px rgba(0, 0, 0, .35);
+}
+
+
+
+.tag-resources-dark-small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #231F20;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-resources-dark-small svg {
+  fill: #231F20;
+}
+.tag-resources-dark-small svg path {
+  fill: #231F20;
+}
+.tag-resources-ventilation-small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color:#4D748D;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-resources-ventilation-small svg {
+  fill:#4D748D;
+}
+.tag-resources-ventilation-small svg path {
+  fill:#4D748D;
+}
+.tag-resources-hardware-small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #6C3C6C;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-resources-hardware-small svg {
+  fill: #6C3C6C;
+}
+.tag-resources-hardware-small path {
+  fill: #6C3C6C;
+}
+.tag-resources-corporate-small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #931A24;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-resources-corporate-small svg {
+  fill: #931A24;
+}
+.tag-resources-corporate-small svg path {
+  fill: #931A24;
+}
+.tag-resources-light-small {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: #ffffff;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-resources-light-small svg {
+  fill: #ffffff;
+}
+.tag-resources-light-small svg path {
+  fill: #ffffff;
+}
+
+
+.tag-ventilation-small {
+  color: #4D748D;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-hardware-small {
+  color: #6C3C6C;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-corporate-small {
+  color: #931A24;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-dark-small {
+  color: #231F20;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.tag-light-small {
+  color: #ffffff;
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
 /*******************************************************Footer********************************************************************/
 
 
