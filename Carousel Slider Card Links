@@ -1,0 +1,178 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
+<style>
+  .carouseSliderOuter {
+    {{ module.style.spacing_field.css }};
+  }
+  @media screen and (max-width: 900px) {
+    .carouseSliderOuter {
+      {{ module.style.spacing_mobile.css }} !important;
+    }
+  }
+
+  .carouseSliderCardBlock {
+    position: relative; /* To position the clickable link correctly */
+  }
+
+  .carouseImageLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 1;
+  }
+  .carouseCardContentBlock{
+    position: relative;
+    z-index: 0;
+  }
+</style>
+
+<div class="carouseSliderOuter" id="{{ module.section_id }}" style="
+                {% if module.style.background_choice == "image" %}
+                  {{ module.style.backgroundimage_field.css }};
+                {% elif module.style.background_choice == "color" %}
+                  background-color: rgba({{ module.style.background_color.color|convert_rgb }}, {{ module.style.background_color.opacity / 100 }});
+                {% endif %}
+                ">
+  <div class="page-center">
+    <div class="carouseSliderInner">
+      <div class="carouseSliderTagHeading carouseSliderLeft">
+        {% if module.tag_on_off %}
+        <div class="carouseSliderTag">
+          <h6 class="tag-h6-{{ module.tag.tag_color_choice }}">{{ module.tag.tag }}</h6>
+        </div>
+        {% endif %}
+        <div class="carouseSliderHeading">
+          <h2 class="h2-{{ module.heading.heading_color_choice }}">{{ module.heading.heading }}</h2>
+          <div class="carouseSliderContent lead-{{ module.lead.lead_color_choice }}">
+            {{ module.lead.lead_text }}
+          </div>
+          <div class="carouseSliderHeadingBar bar-{{ module.line_color_choice }}">
+          </div>
+        </div>
+      </div>
+      <div class="carouseSliderRight carousel-bar-{{ module.Carouse_slider_line_color_choice }}">
+        <div class="slider-container swiper horizontal_scroll_swiper">
+          <div class="slider swiper-wrapper">
+            {% for item in module.carousel_card %}
+            <div class="repeater slick-slideshow__slide swiper-slide">
+              <div class="carouseSliderCardBlock">
+                <div class="carouseImage">
+                  {% if item.image.src %}
+                  {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}"' %}
+                  {% if item.image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.image.width|escape_attr }}" height="{{ item.image.height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.image.max_width|escape_attr }}" height="{{ item.image.max_height|escape_attr }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading|escape_attr }}"' : '' %}
+                  <img class="image-widescreen" src="{{ item.image.src|escape_url }}" alt="{{ item.image.alt|escape_attr }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                {% if item.image_link.url %}
+                {% set href = item.image_link.url.href %}
+                {% if item.image_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a class="carouseImageLink"
+                   {% if item.image_link.url.type is equalto "CALL_TO_ACTION" %}
+                   href="{{ href }}"
+                   {% else %}
+                   href="{{ href|escape_url }}"
+                   {% endif %}
+                   {% if item.image_link.open_in_new_tab %}
+                   target="_blank"
+                   {% endif %}
+                   {% if item.image_link.rel %}
+                   rel="{{ item.image_link.rel|escape_attr }}"
+                   {% endif %}
+                ></a>
+                {% endif %}
+                <div class="carouseCardContentBlock">
+                  {% if item.tag_on_off %}
+                  <div class="carouseTag tag{{loop.index}}">
+                    <h6 class="tag-{{ item.tag_color_choice }}">{{ item.tag }}</h6>
+                  </div>
+                  {% endif %}
+                  <div class="carouseHeading">
+                    <h5 class="h5-{{ item.heading_color_choice }}">{{ item.heading }}</h5>
+                  </div>
+                  <div class="carouseDescription body-{{ item.description_color_choice }}">
+                    {{ item.description }}
+                  </div>
+                  {% if item.button_on_off %}
+                  <div class="carouseButton btn{{loop.index}}">
+                    {% set href = item.button_link.url.href %}
+                    {% if item.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a class="nav-button-icon-{{ item.button_color_choice }}"
+                       {% if item.button_link.url.type is equalto "CALL_TO_ACTION"  %}
+                       href="{{ href }}"
+                       {% else %}
+                       href="{{ href|escape_url }}"
+                       {% endif %}
+                       {% if item.button_link.open_in_new_tab %}
+                       target="_blank"
+                       {% endif %}
+                       {% if item.button_link.rel %}
+                       rel="{{ item.button_link.rel|escape_attr }}"
+                       {% endif %}
+                       >
+                      {{ item.button_text }}  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <rect width="24" height="24" rx="12" fill="#931A24"/>
+                      <path d="M10 18L16 12L10 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                    </a>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var swiper = new Swiper(".horizontal_scroll_swiper", {
+    slidesPerView: 2.3,
+    spaceBetween: 0,
+    freeMode: true,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true, // Enable dragging the scrollbar
+    },
+    mousewheel: true,
+    breakpoints: {
+      1024: { slidesPerView: 2.3, spaceBetween: 0 },
+      901: { slidesPerView: 1.5, spaceBetween: 0 },
+      768: { slidesPerView: 2.3, spaceBetween: 0 },
+      500: { slidesPerView: 1.5, spaceBetween: 0 },
+      480: { slidesPerView: 1.5, spaceBetween: 0 },
+      320: { slidesPerView: 1, spaceBetween: 20 },
+    }
+  });
+
+  function setEqualHeight() {
+    let maxHeight = 0;
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      let height = slide.offsetHeight;
+      if (height > maxHeight) maxHeight = height;
+    });
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.style.height = maxHeight + "px";
+    });
+  }
+
+  // Run after Swiper initialization
+  setTimeout(setEqualHeight, 500);
+  window.addEventListener("resize", setEqualHeight);
+</script>
