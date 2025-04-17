@@ -1,0 +1,40 @@
+
+/******  HARDWARE ******/
+.jet-search-filter__input {
+    padding: 24px 16px 16px 48px !important;
+}
+
+.jet-search-filter__input-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://products.titon.com/wp-content/uploads/2025/04/search-hardware-700.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+/******  VENTILATION ******/
+.jet-search-filter__input {
+    padding: 24px 16px 16px 48px !important;
+}
+
+.jet-search-filter__input-wrapper::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://products.titon.com/wp-content/uploads/2025/04/search-ventilation-700.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 1;
+}
