@@ -1,0 +1,17 @@
+/* Ventilation */
+a {
+  color: #364554
+}
+
+a:visited {
+  color: #364554
+}
+
+a:hover {
+  color: #4D748D;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #4D748D
+}
